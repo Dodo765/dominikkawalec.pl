@@ -1,0 +1,184 @@
+body {
+    font-family: Arial;
+    background-color: aliceblue;
+    padding: 40px 0; 
+}
+
+.mobile {
+    display: none;
+}
+.mobile p{
+    font-size: 50px;
+}
+@media screen and (max-width: 800px){
+    .container{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+.container {
+    width: 1500px;
+    min-height: 92vh;
+    margin: 0 auto;
+    box-shadow:0 0 15px grey;
+    background-color: white;
+    border-radius: 25px;
+    
+}
+section{
+    display: flex;
+    justify-content:center
+}
+p{
+    font-size: 30px;
+    font-weight: 700;
+
+}
+iframe{
+    margin: 50px;
+}
+img{
+    width: 1400px;
+    margin:25px
+}
+#kosztorys{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+#kosztorys a{
+    background-color:aliceblue;
+    margin: 30px;
+    padding: 10px;
+    border: solid 2px cornflowerblue;
+    border-radius: 40px;
+    transition: 0.4s;
+    text-decoration: none;
+    color: black;
+}
+#kosztorys a:hover{
+    scale: 1.3;
+    transition: 0.4s;
+}
+
+
+.thumbnail {
+    border: solid 0px rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 18px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin:  50px auto;
+    max-width: 1300px;
+    overflow: hidden;
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+
+.thumbnail img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.thumbnail img:focus,
+.thumbnail img:focus {
+    border: solid 5px rgba(61, 61, 146, 0.1);
+}
+
+.popup {
+    align-content: center;
+    animation: fadeIn 0.3s;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup.fade-out {
+    animation: fadeOut 0.3s both;
+}
+
+.popup__img {
+    max-height: 80%;
+    max-width: 80%;
+}
+
+.popup__close {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 128px;
+    position: fixed;
+    right: 64px;
+    top: 64px;
+}
+
+.popup__arrow {
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 128px;
+    height: 128px;
+    line-height: 128px;
+    position: absolute;
+    top: 50%;
+    width: 128px;
+}
+
+.popup__close,
+.popup__arrow {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.popup__close:hover,
+.popup__arrow:hover {
+    opacity: 1;
+}
+
+.popup__arrow--left {
+    left: 5%;
+}
+
+.popup__arrow--right {
+    right: 5%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
